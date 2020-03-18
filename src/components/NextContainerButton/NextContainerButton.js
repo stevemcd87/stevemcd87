@@ -10,15 +10,14 @@ function NextContainerButton() {
     // [waitForSecondClick, setWaitForSecondClick] = useState(false),
     nc = useRef(null);
 
-
-    // useEffect(()=>{
-    //   if(waitForSecondClick) {
-    //     setTimeout(()=>{
-    //       console.log('false');
-    //       setWaitForSecondClick(false)
-    //     },1000)
-    //   }
-    // },[waitForSecondClick])
+  // useEffect(()=>{
+  //   if(waitForSecondClick) {
+  //     setTimeout(()=>{
+  //       console.log('false');
+  //       setWaitForSecondClick(false)
+  //     },1000)
+  //   }
+  // },[waitForSecondClick])
 
   useEffect(() => {
     getActive();
@@ -28,8 +27,6 @@ function NextContainerButton() {
     return window.removeEventListener("scroll", () => {});
   }, []);
 
-
-
   useEffect(() => {
     getNextOffset();
     window.addEventListener("resize", () => {
@@ -38,28 +35,32 @@ function NextContainerButton() {
     return window.removeEventListener("resize", () => {});
   }, []);
 
-//   useEffect(() => {
-//     // scrollToNextContainer()
-//     window.addEventListener("keydown", e => {
-// console.log();
-//       if (e.code === "ArrowDown" && isActive) {
-//         console.log(waitForSecondClick);
-//         console.log(isActive);
-//         if (waitForSecondClick) {
-//           window.scrollTo(0,nextContainerOffset);
-//        } else {
-//          setWaitForSecondClick(true)
-//        }
-//
-//       }
-//
-//     });
-//     return window.removeEventListener("keydown", () => {});
-//   }, [isActive,waitForSecondClick]);
+  //   useEffect(() => {
+  //     // scrollToNextContainer()
+  //     window.addEventListener("keydown", e => {
+  // console.log();
+  //       if (e.code === "ArrowDown" && isActive) {
+  //         console.log(waitForSecondClick);
+  //         console.log(isActive);
+  //         if (waitForSecondClick) {
+  //           window.scrollTo(0,nextContainerOffset);
+  //        } else {
+  //          setWaitForSecondClick(true)
+  //        }
+  //
+  //       }
+  //
+  //     });
+  //     return window.removeEventListener("keydown", () => {});
+  //   }, [isActive,waitForSecondClick]);
   return (
     <div className="next-container-button-component hide-4-mobile" ref={nc}>
       {nextContainerOffset && (
-        <button type="button" id="next-container" onClick={scrollToNextContainer}>
+        <button
+          type="button"
+          id="next-container"
+          onClick={scrollToNextContainer}
+        >
           <kbd>
             <FaArrowDown />
           </kbd>
@@ -69,27 +70,31 @@ function NextContainerButton() {
   );
 
   function getNextOffset() {
-    let containerId = nc.current.closest(".container").id,
-      nextContainerId = containerId.replace(/[1-9]/, match => +match + 1),
-      ncOffset = document.getElementById(nextContainerId);
-    if (ncOffset) ncOffset = ncOffset.offsetTop;
-    setNextContainerOffset(ncOffset);
+    if (nc.current.offsetTop) {
+      let containerId = nc.current.closest(".container").id,
+        nextContainerId = containerId.replace(/[1-9]/, match => +match + 1),
+        ncOffset = document.getElementById(nextContainerId);
+      if (ncOffset) ncOffset = ncOffset.offsetTop;
+      setNextContainerOffset(ncOffset);
+    }
   }
 
   function getActive() {
-    let parentOffset = nc.current.offsetParent.offsetTop,
-      ncOffset = nc.current.offsetTop;
-    if (
-      parentOffset + ncOffset >= window.pageYOffset &&
-      parentOffset + ncOffset < window.pageYOffset + window.innerHeight &&
-      !isActive
-    ) {
-      setIsActive(true);
-    }else if (
-      (parentOffset + ncOffset < window.pageYOffset ||
-        parentOffset + ncOffset > window.pageYOffset + window.innerHeight)
-    ) {
-      setIsActive(false);
+    if (nc.current.offsetTop) {
+      let parentOffset = nc.current.offsetParent.offsetTop,
+        ncOffset = nc.current.offsetTop;
+      if (
+        parentOffset + ncOffset >= window.pageYOffset &&
+        parentOffset + ncOffset < window.pageYOffset + window.innerHeight &&
+        !isActive
+      ) {
+        setIsActive(true);
+      } else if (
+        parentOffset + ncOffset < window.pageYOffset ||
+        parentOffset + ncOffset > window.pageYOffset + window.innerHeight
+      ) {
+        setIsActive(false);
+      }
     }
   }
 
