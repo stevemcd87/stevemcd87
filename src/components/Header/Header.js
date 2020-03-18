@@ -5,21 +5,13 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Icon } from "@iconify/react";
 import codewarsIcon from "@iconify/icons-simple-icons/codewars";
 
-import styled, { keyframes } from "styled-components";
-import {  slideInLeft } from "react-animations";
+// import styled, { keyframes } from "styled-components";
+// import {  slideInLeft } from "react-animations";
 
 // const bounceAnimation = keyframes`${bounce}`;
-const slideInLeftAnimation = keyframes`${slideInLeft}
-from {
-   transform: translatex(-100em); }
-`;
 
-
-const SlideIn = styled.div`
-  animation: 1.5s linear ${slideInLeftAnimation};
-`;
 const HeaderList = [
-  <SlideIn key="headeList2">
+  <>
     <li className="header-li">
       <em>
         Does your Business need a Customized Website and<>&#47;</>or Computer
@@ -32,7 +24,7 @@ const HeaderList = [
     <li className="header-li">
       <strong>Call Me - <a href="tel:+9543933948">(954) 393-3948</a></strong>
     </li>
-  </SlideIn>
+  </>
 ];
 
 function Header() {
