@@ -57,7 +57,7 @@ function NextContainerButton() {
 //     return window.removeEventListener("keydown", () => {});
 //   }, [isActive,waitForSecondClick]);
   return (
-    <div className="next-container-button-component" ref={nc}>
+    <div className="next-container-button-component hide-4-mobile" ref={nc}>
       {nextContainerOffset && (
         <button type="button" id="next-container" onClick={scrollToNextContainer}>
           <kbd>
