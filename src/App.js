@@ -6,11 +6,11 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Technologies from "./components/Technologies/Technologies";
 import NextContainerButton from "./components/NextContainerButton/NextContainerButton";
 
-import Amplify from "aws-amplify";
-import awsconfig from "./aws-exports";
+// import Amplify from "aws-amplify";
+// import awsconfig from "./aws-exports";
 // import { withAuthenticator } from 'aws-amplify-react'; // or 'aws-amplify-react-native';
 
-Amplify.configure(awsconfig);
+// Amplify.configure(awsconfig);
 
 function App() {
   // const [userText, setUserText] = useState("");
