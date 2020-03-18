@@ -1,0 +1,38 @@
+.project {
+  position: relative;
+}
+
+.project:nth-child(odd) {
+  background-color: rgba(177, 137, 112, 0.3);
+}
+
+.project:nth-child(even) {
+  background-color: rgba(163, 205, 204, 0.8);
+}
+
+.project-content{
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.project:nth-child(odd) .project-content {
+  background-color: rgba(177, 137, 112, 0.5);
+}
+
+.project:nth-child(even) .project-content{
+  background-color: rgba(100, 152, 173, 0.4);
+}
+
+
+
+.project-image {
+  width: 80%;
+  min-width: 190px;
+  min-height: 190px;
+  max-width: 450px;
+
+}

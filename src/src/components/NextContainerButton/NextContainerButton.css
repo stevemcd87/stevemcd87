@@ -1,0 +1,24 @@
+.next-container-button-component {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+}
+
+.next-container-button-component button {
+  background-color: rgb(240, 255, 255, 0.7);
+  border: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 53px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 53px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 53px 5px rgba(0, 0, 0, 0.75);
+}
+
+.next-container-button-component button.clicked {
+  background-color: rgba(100, 152, 173, 0.5);
+}
+
+.next-container-button-component svg {
+  font-size: 2em;
+}

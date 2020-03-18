@@ -1,0 +1,39 @@
+header {
+  position: relative;
+  background-color: inherit;
+}
+
+#header-head {
+  background-color: rgba(100, 152, 173, 0.4);
+  border-radius: 30px;
+}
+
+header ul {
+  background-color: rgba(100, 152, 173, 0.5);
+  padding: 0 1em;
+  margin: 1em;
+  border-radius: 40px;
+}
+
+header li {
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#social-icons a {
+  color: Black;
+}
+
+#social-icons svg {
+  font-size: 3em;
+}

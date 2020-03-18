@@ -1,0 +1,30 @@
+.technologies-component {
+  background-color: rgba(100, 152, 173, 0.6);
+  width: 80%;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.technologies-component h2 {
+  font-size: 2.5em;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.tech-list h3 {
+  font-size: 1.4em;
+}
+
+.tech-list li {
+  list-style: none;
+}
+
+.lib-fw {
+  display: flex;
+  justify-content: space-around;
+}
