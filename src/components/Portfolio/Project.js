@@ -5,7 +5,7 @@ import NextContainerButton from "../NextContainerButton/NextContainerButton";
 function Project(props) {
   console.log(props);
   let { project, ind } = props,
-    { name, technologies, details, link } = project;
+    { name, technologies, details, link, repo } = project;
   return (
     <div id={`container-${ind + 3}`} className="container project">
       <div className="project-content">
@@ -17,7 +17,11 @@ function Project(props) {
           className="project-image"
         />
         <p>{details}</p>
-        {link && <a href={link}>Public Demo</a>}
+      <div className="links">
+        {repo && <a target="_blank" href={repo}>Repo</a>}
+        {link && <a target="_blank" href={link}>Demo</a>}
+      </div>
+
       </div>
 
       <NextContainerButton />

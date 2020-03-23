@@ -36,3 +36,8 @@
   max-width: 450px;
 
 }
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}

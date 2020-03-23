@@ -4,14 +4,31 @@ import Project from "./Project";
 function Portfolio() {
   let projects = [
     {
+      name: "Review",
+      technologies: [
+        "React",
+        "Amplify",
+        "Cognito",
+        "API Gateway",
+        "S3",
+        "DynamoDB"
+      ],
+      link: "https://fordalo.com",
+      repo: "https://github.com/stevemcd87/review",
+      details:
+        "Allows user to create notes to review. Notes can include an image, an audio recording and subnotes."
+    },
+    {
       name: "Recipes",
       technologies: ["Angular", "Auth0"],
       link: "https://stevemcd87.github.io/Recipes/home",
-      details: "Allows user to add recipes, then displays the recipe on a mobile view."
+      repo: "https://github.com/stevemcd87/Recipes",
+      details:
+        "Allows user to add recipes, then displays the recipe on a mobile view."
     },
     {
       name: "Anibal Hardware",
-      technologies: ["ReactOnRails", "RubyOnRails"],
+      technologies: ["ReactOnRails", "RubyOnRails", "PostgreSQL"],
       details:
         "Custom program for a small business which displays all items and keeps track of purchases and inventory created by user."
     },
@@ -31,7 +48,7 @@ function Portfolio() {
   return (
     <div id="portfolio-component">
       {projects.map((project, ind) => {
-        return <Project key={ind} {...{project, ind}} />;
+        return <Project key={ind} {...{ project, ind }} />;
       })}
     </div>
   );

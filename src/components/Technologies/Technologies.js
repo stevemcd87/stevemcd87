@@ -19,12 +19,13 @@ export default function Technologies() {
             <h3>Fullstack</h3>
           </li>
           <li>RubyOnRails(Ruby)</li>
-        <li>Django(Python)</li>
+          <li>Django(Python)</li>
         </div>
         <div>
           <li>
             <h3>AWS</h3>
           </li>
+          <li>Amplify</li>
           <li>S3</li>
           <li>Lambda</li>
           <li>API Gateway</li>
