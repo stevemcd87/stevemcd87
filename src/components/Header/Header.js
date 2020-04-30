@@ -1,43 +1,11 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Icon } from "@iconify/react";
 import codewarsIcon from "@iconify/icons-simple-icons/codewars";
 
-// import styled, { keyframes } from "styled-components";
-// import {  slideInLeft } from "react-animations";
-
-// const bounceAnimation = keyframes`${bounce}`;
-
-const HeaderList = [
-  <>
-    <li className="header-li">
-      <em>
-        Does your Business need a Customized Website and<>&#47;</>or Computer
-        Program?
-      </em>
-    </li>
-    <li className="header-li">
-      <em>Looking for an Experienced Web Developer to join your team?</em>
-    </li>
-    <li className="header-li">
-      <strong>Call Me - <a href="tel:+19543933948">(954) 393-3948</a></strong>
-    </li>
-  </>
-];
-
 function Header() {
-  // const [headerListDisplayed, setheaderListDisplayed] = useState([]);
-
-  useEffect(() => {});
-
-  function getList(ind) {
-    return HeaderList[ind];
-  }
-  // <Bounce>
-  //   <h1>HEY</h1>
-  // </Bounce>
   return (
     <div>
       <header>
@@ -71,7 +39,17 @@ function Header() {
             </a>
           </div>
         </div>
-        <ul id="header-list">{HeaderList}</ul>
+        <ul id="header-list">
+          {" "}
+          <li className="header-li">
+            <em>Web Developer/ Programmer</em>
+          </li>
+          <li className="header-li">
+            <strong>
+              <a href="tel:+19543933948">(954) 393-3948</a>
+            </strong>
+          </li>
+        </ul>
       </header>
     </div>
   );
