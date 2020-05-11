@@ -40,7 +40,6 @@ function Header() {
           </div>
         </div>
         <ul id="header-list">
-          {" "}
           <li className="header-li">
             <em>Web Developer/ Programmer</em>
           </li>

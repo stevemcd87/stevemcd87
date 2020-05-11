@@ -8,18 +8,18 @@ export default function Technologies() {
       <ul className="tech-list">
         <div>
           <li>
-            <h3>Frontend </h3>
+            <h3>Framworks </h3>
           </li>
           <li>jQuery</li>
           <li>React</li>
           <li>Angular</li>
+          <li>RubyOnRails</li>
         </div>
         <div>
           <li>
-            <h3>Fullstack</h3>
+            <h3>Testing</h3>
           </li>
-          <li>RubyOnRails(Ruby)</li>
-          <li>Django(Python)</li>
+          <li>React-Testing-Library</li>
         </div>
         <div>
           <li>

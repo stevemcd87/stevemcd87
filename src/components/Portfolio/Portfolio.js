@@ -4,6 +4,16 @@ import Project from "./Project";
 function Portfolio() {
   let projects = [
     {
+      name: "Markdown Textarea React",
+      technologies: [
+        "React",
+      ],
+      link: "https://stevemcd87.github.io/markdown-textarea-react-demo/",
+      repo: "https://github.com/stevemcd87/markdown-textarea-react",
+      details:
+        "a React component node package that displays a textarea form input that accepts markdown syntax and converts value to html"
+    },
+    {
       name: "Review",
       technologies: [
         "React",
@@ -16,7 +26,7 @@ function Portfolio() {
       link: "https://fordalo.com",
       repo: "https://github.com/stevemcd87/review",
       details:
-        "Allows user to create notes to review. Notes can include an image, an audio recording and subnotes."
+        "Allows user to create notes & questions to review and test themselves afterwards. Notes can include an image, an audio recording and a main note field that accepts markdown syntax."
     },
     {
       name: "Recipes",
@@ -31,18 +41,6 @@ function Portfolio() {
       technologies: ["ReactOnRails", "RubyOnRails", "PostgreSQL"],
       details:
         "Custom program for a small business which displays all items and keeps track of purchases and inventory created by user."
-    },
-    {
-      name: "Quick Learn",
-      technologies: ["Django", "jQuery"],
-      details:
-        "Allows user to review Flash Cards and test their knowledge afterwards."
-    },
-    {
-      name: "Florida Picks",
-      technologies: ["Angular"],
-      details:
-        "Displays analytics for Florida's Pick 2 and Pick 3 games for user to examine."
     }
   ];
   return (
