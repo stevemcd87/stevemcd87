@@ -8,7 +8,7 @@ export default function Technologies() {
       <ul className="tech-list">
         <div>
           <li>
-            <h3>Framworks </h3>
+            <h3>Frameworks </h3>
           </li>
           <li>jQuery</li>
           <li>React</li>

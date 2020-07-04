@@ -27,11 +27,6 @@ function App() {
       </div>
 
       <Portfolio />
-        <img
-          src={`https://www.freedigitalphotos.net/images/img/homepage/394230.jpg`}
-          alt="temp"
-          className="fixed"
-        />
     </div>
   );
 }
